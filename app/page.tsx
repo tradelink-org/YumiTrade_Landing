@@ -290,7 +290,7 @@ const YUMITradeHomePage: React.FC = () => {
               </p>
               <p className="flex items-center space-x-3">
                 <Smartphone className="w-5 h-5" />{" "}
-                <span className="font-bold">Phone:</span>+254 7XX XXX XXX
+                <span className="font-bold">Phone:</span>+254 728 818 475
               </p>
               <p className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5" />{" "}
