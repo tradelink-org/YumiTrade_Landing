@@ -286,7 +286,7 @@ const YUMITradeHomePage: React.FC = () => {
             <div className="space-y-4">
               <p className="flex items-center space-x-3">
                 <Mail className="w-5 h-5" />{" "}
-                <span className="font-bold">Email:</span>tradelinkim@gmail.com
+                <span className="font-bold">Email:</span>admin@yumitrade.org
               </p>
               <p className="flex items-center space-x-3">
                 <Smartphone className="w-5 h-5" />{" "}
