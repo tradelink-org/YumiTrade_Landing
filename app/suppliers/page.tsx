@@ -95,7 +95,7 @@ export default function SuppliersPage() {
                 <div className="container mx-auto px-6 text-center">
                     <div className="max-w-2xl mx-auto bg-green-50 rounded-3xl p-10 border border-green-100">
                         <Rocket className="w-12 h-12 text-primary mx-auto mb-6" />
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Launching December 28th</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Launching February 20th, 2026</h2>
                         <p className="text-gray-600 mb-8">
                             We are currently onboarding a select group of suppliers for our beta launch. Secure your spot early.
                         </p>

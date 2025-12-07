@@ -38,7 +38,7 @@ const ComingSoonModal: React.FC<ComingSoonModalProps> = ({ isOpen, onClose }) =>
                         <Calendar className="w-6 h-6 text-primary" />
                         <div className="text-left">
                             <p className="text-xs text-green-600 font-bold uppercase tracking-wider">Official Launch</p>
-                            <p className="text-lg font-bold text-gray-900">December 28th, 2025</p>
+                            <p className="text-lg font-bold text-gray-900">February 20th, 2026</p>
                         </div>
                     </div>
 

@@ -39,7 +39,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
-              Beta Preview • Launching Dec 28th
+              Beta Preview • Launching Feb 20th
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight">
               Source Premium <br />
@@ -208,7 +208,7 @@ const ValueProp = () => {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Seamless Logistics</h3>
             <p className="text-gray-600 leading-relaxed">
-              Integrated logistics solutions to handle shipping, customs, and delivery from Nairobi to anywhere in the world.
+              Integrated logistics solutions to handle shipping, customs, and delivery from Kenya to anywhere in the world.
             </p>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
@@ -240,7 +240,7 @@ const CTA = () => {
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold mb-6 border border-white/20 backdrop-blur-sm">
               <Rocket className="w-4 h-4" />
-              Launching December 28th, 2025
+              Launching February 20th, 2026
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Be The First To Know</h2>
             <p className="text-green-100 text-lg md:text-xl mb-10">
