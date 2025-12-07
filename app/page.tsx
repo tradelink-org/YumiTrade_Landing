@@ -1,371 +1,279 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
-  Mail,
-  Briefcase,
-  Truck,
-  BarChart,
-  CheckCircle,
-  Smartphone,
-  MapPin,
-  Twitter,
-  Linkedin,
+  Search,
+  Globe,
+  ShieldCheck,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle2,
+  Leaf,
+  Hammer,
+  Shirt,
+  Construction,
+  Rocket,
 } from "lucide-react";
 import Image from "next/image";
-interface StatBlockProps {
-  value: string;
-  label: string;
-}
-const StatBlock: React.FC<StatBlockProps> = ({ value, label }) => (
-  <div className="p-4 bg-white rounded-lg shadow-md border-t-4 border-blue-600">
-    <p className="text-4xl font-bold text-blue-600 mb-1">{value}</p>
-    <p className="text-sm text-gray-500">{label}</p>
-  </div>
-);
+import Link from "next/link";
+import ComingSoonModal from "./components/ComingSoonModal";
 
-interface ServiceCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  icon,
-  title,
-  description,
-}) => (
-  <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-2 border-transparent hover:border-blue-600">
-    <div className="text-3xl text-blue-600 mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
+// --- Components ---
 
-interface StepCardProps {
-  number: string;
-  title: string;
-}
- const features = [
-    {
-      title: "Scalability & Performance",
-      items: [
-        "High Availability: Enterprise-grade infrastructure ensuring 99.9% uptime",
-        "Global Reach: Support for international transactions and multiple currencies",
-        "Real-Time Processing: Instant notifications and messaging",
-        "Load Handling: Capable of processing thousands of concurrent transactions",
-      ],
-    },
-    {
-      title: "Analytics & Insights",
-      items: [
-        "Performance Dashboards: Track key business metrics",
-        "Supplier Analytics: Monitor supplier performance and ratings",
-        "Order Tracking: Complete visibility into order lifecycle",
-        "Revenue Reports: Comprehensive financial reporting",
-      ],
-    },
-    {
-      title: "Integration & Extensibility",
-      items: [
-        "API Access: RESTful APIs for third-party integrations",
-        "Payment Gateways: Support for multiple payment providers",
-        "Notification Channels: Email, SMS, and in-app notifications",
-        "Custom Workflows: Configurable business processes",
-      ],
-    },
-  ];
+const Hero = () => {
+  const [showModal, setShowModal] = useState(false);
 
-interface PortfolioCardProps {
-  title: string;
-  description: string;
-}
-const PortfolioCard: React.FC<PortfolioCardProps> = ({
-  title,
-  description,
-}) => (
-  <div className="p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-600">
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">📌 {title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
-
-interface CheckListItemProps {
-  text: string;
-}
-const CheckListItem: React.FC<CheckListItemProps> = ({ text }) => (
-  <div className="flex items-start space-x-3">
-    <CheckCircle className="w-6 h-6 text-green-500 shrink-0 mt-1" />
-    <p className="text-lg text-gray-700">{text}</p>
-  </div>
-);
-
-const YUMITradeHomePage: React.FC = () => {
   return (
-    <div className="min-h-screen antialiased">
-      <section className="bg-white py-20 md:py-32 border-b">
-        <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 mb-10 lg:mb-0">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-              Smart B2B Procurement & Trade Solutions for Modern Businesses
+    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-green-50 via-white to-white"></div>
+      <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-bl from-green-100/50 to-transparent blur-3xl opacity-50"></div>
+
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div className="lg:w-1/2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-6 border border-blue-100">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Beta Preview • Launching Dec 28th
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight">
+              Source Premium <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-600">
+                Kenyan Products
+              </span>
             </h1>
-            <p className="mt-4 text-xl text-gray-600">
-              YUMI Trade helps organizations streamline sourcing, manage
-              suppliers, and automate procurement workflows with reliable,
-              scalable tools.Our platform facilitates trust-based commerce
-              through comprehensive verification systems, secure payment
-              handling, and seamless communication channels.
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
+              Your direct gateway to verified manufacturers and suppliers in Kenya.
+              We are currently onboarding top-tier suppliers for our official launch.
             </p>
-          </div>
-          <div className="lg:w-1/2 flex justify-center lg:justify-end">
-            <Image src="/intro.png" alt="Hero Image" width={500} height={500} />
-          </div>
-        </div>
-        <div className="container mx-auto px-6">
-          <div className="mt-8 ">
-            <h2 className="text-3xl font-bold text-gray-900">🎯 Our Mission</h2>
-            <p className="text-lg text-black">
-              To revolutionize B2B trade by providing a trusted platform where
-              businesses can discover, negotiate, and transact with confidence,
-              backed by robust verification processes and trade assurance
-              mechanisms.
-            </p>
-          </div>
-          <div className="mt-8 ">
-            <h2 className="text-3xl font-bold text-gray-900">
-              💡 Value Proposition
-            </h2>
-            <ol className="text-black text-lg">
-              <li>
-               <strong>For Suppliers: </strong> Build verified profiles, enhance market
-                visibility, establish reputation through multi-dimensional
-                ratings, and connect with qualified buyers worldwide
-              </li>
-              <li>
-             <strong>For Buyers:</strong> Access vetted suppliers, secure payment transactions, make informed decisions through transparent ratings, and resolve disputes efficiently
-              </li>
-              <li><strong>For Platform Operators:</strong> Comprehensive management tools, automated workflows, advanced analytics, and revenue optimization.</li>
-            </ol>
 
-          </div>
-        </div>
-      </section>
+            {/* Search Box */}
+            <div className="bg-white p-2 rounded-2xl shadow-xl border border-gray-100 max-w-xl flex items-center gap-2 mb-8">
+              <div className="pl-4 text-gray-400">
+                <Search className="w-5 h-5" />
+              </div>
+              <input
+                type="text"
+                placeholder="What are you looking for? (e.g. Coffee, Textiles)"
+                className="flex-1 py-3 bg-transparent outline-none text-gray-900 placeholder:text-gray-400"
+              />
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-medium transition"
+              >
+                Search
+              </button>
+            </div>
 
-      {/* 2. About Us */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">Who We Are</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-gray-600">
-            YUMI Trade is a B2B technology company providing procurement,
-            supply-chain, and business transaction solutions. Our platform
-            empowers businesses to manage vendors, analyze purchasing data, and
-            execute secure digital trade processes.
-          </p>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <StatBlock value="5K+" label="Suppliers Connected" />
-            <StatBlock value="20+" label="Industries Served" />
-            <StatBlock value="99.9%" label="Platform Uptime" />
-            <StatBlock
-              value="🇰🇪"
-              label="Based in Nairobi, Serving Africa & Beyond"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Our Services / Solutions */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            🛠️ Our Solutions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard
-              icon={<Briefcase />}
-              title="Supplier Management"
-              description="Centralize all your suppliers and track engagement, compliance, and performance."
-            />
-            <ServiceCard
-              icon={<Truck />}
-              title="Procurement Automation"
-              description="Automate RFQs, purchase orders, and approvals for efficient workflow."
-            />
-            <ServiceCard
-              icon={<CheckCircle />}
-              title="Trade Verification & Compliance"
-              description="Ensure every transaction meets business and crucial regulatory standards."
-            />
-            <ServiceCard
-              icon={<BarChart />}
-              title="Analytics & Reporting"
-              description="Advanced dashboards for spend analysis, forecasting, and data-driven decisions."
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-         📊 Platform Capabilities
-          </h2>
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-      {features.map((section, index) => (
-        <div
-          key={index}
-          className="
-            bg-white p-6 rounded-xl shadow-sm border 
-            hover:border-t-4 hover:border-t-blue-600 
-            transition-all duration-300 
-            cursor-pointer
-          "
-        >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            {section.title}
-          </h3>
-
-          <ul className="space-y-2 text-gray-700">
-            {section.items.map((item, idx) => (
-              <li key={idx} className="text-sm leading-relaxed">
-                • {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-        </div>
-      </section>
-
-      {/* 5. Case Studies / Portfolio Items */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            🧾 Our Portfolio & Case Studies
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <PortfolioCard
-              title="Supplier Workflow System"
-              description="Developed a digital workflow solution for supplier onboarding and compliance checks."
-            />
-            <PortfolioCard
-              title="B2B Polling & Market Insights System"
-              description="Created a polling platform helping businesses gather real-time market intelligence."
-            />
-            <PortfolioCard
-              title="Order & Logistics Coordination Tool"
-              description="Built tools for real-time order tracking and end-to-end supply-chain visibility."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Why Businesses Choose YUMI Trade */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            ⭐ Why Businesses Choose YUMI Trade
-          </h2>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-xl">
-            <CheckListItem text="Trusted by SMEs and enterprises" />
-            <CheckListItem text="Secure, encrypted transactions" />
-            <CheckListItem text="Fast and simple onboarding" />
-            <CheckListItem text="24/7 technical and trade support" />
-            <CheckListItem text="Highly scalable cloud infrastructure" />
-            <CheckListItem text="Dedicated local compliance focus" />
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Contact / Business Info */}
-      <section className="py-16 bg-blue-600 text-white" id="contact">
-        <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-            <p className="text-lg mb-8">
-              We'd love to discuss how YUMI Trade can transform your B2B
-              operations.
-            </p>
-            <div className="space-y-4">
-              <p className="flex items-center space-x-3">
-                <Mail className="w-5 h-5" />{" "}
-                <span className="font-bold">Email:</span>admin@yumitrade.org
-              </p>
-              <p className="flex items-center space-x-3">
-                <Smartphone className="w-5 h-5" />{" "}
-                <span className="font-bold">Phone:</span>+254 728 818 475
-              </p>
-              <p className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5" />{" "}
-                <span className="font-bold">Location:</span> Nairobi, Kenya
-              </p>
+            <div className="flex items-center gap-6 text-sm text-gray-500 font-medium">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                Verified Suppliers
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                Trade Assurance
+              </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <form className="space-y-4 bg-white p-8 rounded-lg shadow-2xl text-gray-800">
-            <h3 className="text-xl font-bold mb-4">Send Us a Message</h3>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full p-3 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500"
-              required
-            />
-            <input
-              type="text"
-              placeholder="Company"
-              className="w-full p-3 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-3 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500"
-              required
-            />
-            <textarea
-              placeholder="Message"
-              rows={4}
-              className="w-full p-3 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500"
-              required
-            />
-            <button
-              type="submit"
-              className="w-full p-3 font-semibold rounded-lg bg-blue-700 text-white hover:bg-blue-800 transition shadow-md"
-            >
-              Submit Inquiry
-            </button>
-          </form>
-        </div>
-      </section>
+          <div className="lg:w-1/2 relative">
+            {/* Abstract Composition for Hero Image */}
+            <div className="relative z-10 grid grid-cols-2 gap-4">
+              <div className="space-y-4 mt-12">
+                <div className="h-64 bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+                  <Image src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop" alt="Kenyan Coffee" fill className="object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div className="h-40 bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+                  <Image src="https://images.unsplash.com/photo-1563906267088-b029e7101114?q=80&w=2070&auto=format&fit=crop" alt="Textiles" fill className="object-cover hover:scale-105 transition duration-500" />
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="h-40 bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+                  <Image src="/images/tea.png" alt="Tea" fill className="object-cover hover:scale-105 transition duration-500" />
+                </div>
+                <div className="h-64 bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+                  <Image src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1913&auto=format&fit=crop" alt="Kenyan Landscape" fill className="object-cover hover:scale-105 transition duration-500" />
+                </div>
+              </div>
+            </div>
 
-      {/* 8. Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">
-            &copy; {new Date().getFullYear()} YUMI Trade. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 md:mt-0 items-center">
-            <a
-              href="/privacy"
-              className="hover:text-white transition duration-200 text-sm"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="/terms"
-              className="hover:text-white transition duration-200 text-sm"
-            >
-              Terms & Conditions
-            </a>
-            <a href="#" className="hover:text-white transition duration-200">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="hover:text-white transition duration-200">
-              <Twitter className="w-5 h-5" />
-            </a>
+            {/* Decorative Elements */}
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </section>
   );
 };
 
-export default YUMITradeHomePage;
+const CategoryCard = ({ icon: Icon, title, count, image }: { icon: any, title: string, count: string, image: string }) => (
+  <div className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition duration-300 cursor-pointer border border-gray-100 bg-white">
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+    <Image src={image} alt={title} fill className="object-cover group-hover:scale-110 transition duration-500" />
+    <div className="relative z-20 p-6 h-64 flex flex-col justify-end">
+      <div className="mb-2 w-10 h-10 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center text-white">
+        <Icon className="w-5 h-5" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
+      <p className="text-gray-300 text-sm">{count} Suppliers Onboarding</p>
+    </div>
+  </div>
+);
+
+const FeaturedCategories = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <section className="py-20 bg-white">
+      <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between items-end mb-12">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Industries We Are Onboarding</h2>
+            <p className="text-gray-600">We are actively verifying suppliers in these key sectors for our launch.</p>
+          </div>
+          <Link href="#" onClick={() => setShowModal(true)} className="hidden md:flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all">
+            View All Categories <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <CategoryCard
+            icon={Leaf}
+            title="Agriculture & Food"
+            count="1,200+"
+            image="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=2070&auto=format&fit=crop"
+          />
+          <CategoryCard
+            icon={Shirt}
+            title="Apparel & Textiles"
+            count="850+"
+            image="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974&auto=format&fit=crop"
+          />
+          <CategoryCard
+            icon={Construction}
+            title="Construction Materials"
+            count="500+"
+            image="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1968&auto=format&fit=crop"
+          />
+          <CategoryCard
+            icon={Hammer}
+            title="Handicrafts & Decor"
+            count="300+"
+            image="/images/handicrafts.png"
+          />
+        </div>
+
+        <div className="mt-8 md:hidden text-center">
+          <Link href="#" onClick={() => setShowModal(true)} className="inline-flex items-center gap-2 text-primary font-semibold">
+            View All Categories <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ValueProp = () => {
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Source from Kenya via YumiTrade?</h2>
+          <p className="text-gray-600 text-lg">
+            We bridge the gap between international buyers and verified Kenyan suppliers, ensuring quality, trust, and efficiency.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div className="w-14 h-14 bg-green-100 text-primary rounded-xl flex items-center justify-center mb-6">
+              <ShieldCheck className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Verified Suppliers</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Every supplier on our platform undergoes a rigorous verification process to ensure legitimacy and production capability.
+            </p>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+              <Globe className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Seamless Logistics</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Integrated logistics solutions to handle shipping, customs, and delivery from Nairobi to anywhere in the world.
+            </p>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <div className="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-6">
+              <TrendingUp className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Trade Assurance</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Secure payment systems that protect both buyers and suppliers until the order is successfully delivered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const CTA = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <section className="py-20">
+      <ComingSoonModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      <div className="container mx-auto px-6">
+        <div className="bg-primary rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold mb-6 border border-white/20 backdrop-blur-sm">
+              <Rocket className="w-4 h-4" />
+              Launching December 28th, 2025
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Be The First To Know</h2>
+            <p className="text-green-100 text-lg md:text-xl mb-10">
+              Join our waitlist today. Whether you are a buyer looking for premium goods or a supplier ready to export, secure your spot.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg"
+              >
+                Find Suppliers
+              </button>
+              <button
+                onClick={() => setShowModal(true)}
+                className="bg-primary-dark border border-green-400 text-white hover:bg-green-900 px-8 py-4 rounded-xl font-bold text-lg transition"
+              >
+                Become a Supplier
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default function YUMITradeHomePage() {
+  return (
+    <div className="min-h-screen font-sans selection:bg-primary/20">
+      <Hero />
+      <FeaturedCategories />
+      <ValueProp />
+      <CTA />
+    </div>
+  );
+}
