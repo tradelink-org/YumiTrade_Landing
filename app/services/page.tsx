@@ -39,7 +39,7 @@ export default function ServicesPage() {
                         </div>
                         <div className="md:w-1/2 bg-gray-100 rounded-3xl h-80 w-full relative overflow-hidden">
                             {/* Placeholder for Service Image */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center text-green-200">
+                            <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-green-600">
                                 <Search className="w-32 h-32 opacity-20" />
                             </div>
                         </div>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
                             </ul>
                         </div>
                         <div className="md:w-1/2 bg-gray-100 rounded-3xl h-80 w-full relative overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center text-blue-200">
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center text-blue-600">
                                 <Truck className="w-32 h-32 opacity-20" />
                             </div>
                         </div>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                             </ul>
                         </div>
                         <div className="md:w-1/2 bg-gray-100 rounded-3xl h-80 w-full relative overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center text-amber-200">
+                            <div className="absolute inset-0 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center text-amber-600">
                                 <ShieldCheck className="w-32 h-32 opacity-20" />
                             </div>
                         </div>

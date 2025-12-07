@@ -53,7 +53,7 @@ export default function AboutPage() {
 
                     <div className="max-w-4xl mx-auto space-y-12">
                         <div className="flex gap-6">
-                            <div className="w-24 text-right font-bold text-gray-400 pt-1">Oct 2025</div>
+                            <div className="w-24 text-right font-bold text-gray-400 pt-1">Dec 2025</div>
                             <div className="relative border-l-2 border-gray-700 pl-8 pb-2">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-green-500 rounded-full"></div>
                                 <h3 className="text-xl font-bold mb-2">Platform Development</h3>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div className="flex gap-6">
-                            <div className="w-24 text-right font-bold text-gray-400 pt-1">Nov 2025</div>
+                            <div className="w-24 text-right font-bold text-gray-400 pt-1">Jan 2026</div>
                             <div className="relative border-l-2 border-gray-700 pl-8 pb-2">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-green-500 rounded-full"></div>
                                 <h3 className="text-xl font-bold mb-2">Supplier Verification Pilot</h3>
@@ -69,7 +69,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div className="flex gap-6">
-                            <div className="w-24 text-right font-bold text-primary pt-1">Dec 2025</div>
+                            <div className="w-24 text-right font-bold text-primary pt-1">Feb 2026</div>
                             <div className="relative border-l-2 border-gray-700 pl-8 pb-2">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full animate-pulse"></div>
                                 <h3 className="text-xl font-bold mb-2 text-primary">Beta Launch</h3>
@@ -77,7 +77,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div className="flex gap-6">
-                            <div className="w-24 text-right font-bold text-gray-500 pt-1">Q1 2026</div>
+                            <div className="w-24 text-right font-bold text-gray-500 pt-1">Q2 2026</div>
                             <div className="relative border-l-2 border-gray-800 pl-8 pb-2">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
                                 <h3 className="text-xl font-bold mb-2 text-gray-500">Global Expansion</h3>
