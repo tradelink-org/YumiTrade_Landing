@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand Colors */
+  --primary: #006837; /* Kenyan Green - Growth, Agriculture */
+  --primary-dark: #004d29;
+  --secondary: #BB0000; /* Kenyan Red - Energy, Vitality */
+  --accent: #F9A825; /* Gold/Yellow - Wealth, Sunshine */
+  
+  /* Neutrals */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --muted: #f4f4f5;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
