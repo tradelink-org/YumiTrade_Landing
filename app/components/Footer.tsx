@@ -43,7 +43,7 @@ const Footer = () => {
                         <h4 className="text-white font-bold mb-6">Contact</h4>
                         <ul className="space-y-3 text-sm">
                             <li>Nairobi, Kenya</li>
-                            <li>support@yumitrade.org</li>
+                            <li>admin@yumitrade.org</li>
                             <li>+254 728 818 475</li>
                         </ul>
                     </div>
