@@ -36,7 +36,7 @@ export default function AboutPage() {
                         </div>
                         <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1913&auto=format&fit=crop"
+                                src="/images/african_person_plant.png"
                                 alt="Kenyan Landscape"
                                 fill
                                 className="object-cover"
