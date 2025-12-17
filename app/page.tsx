@@ -149,7 +149,7 @@ const FeaturedCategories = () => {
             icon={Leaf}
             title="Agriculture & Food"
             count="1,200+"
-            image="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=2070&auto=format&fit=crop"
+            image="/images/african_farmer.png"
           />
           <CategoryCard
             icon={Shirt}
@@ -161,7 +161,7 @@ const FeaturedCategories = () => {
             icon={Construction}
             title="Construction Materials"
             count="500+"
-            image="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1968&auto=format&fit=crop"
+            image="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?q=80&w=1968&auto=format&fit=crop"
           />
           <CategoryCard
             icon={Hammer}
