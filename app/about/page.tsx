@@ -69,7 +69,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div className="flex gap-6">
-                            <div className="w-24 text-right font-bold text-primary pt-1">Feb 2026</div>
+                            <div className="w-24 text-right font-bold text-primary pt-1">May 2026</div>
                             <div className="relative border-l-2 border-gray-700 pl-8 pb-2">
                                 <div className="absolute -left-[9px] top-0 w-4 h-4 bg-primary rounded-full animate-pulse"></div>
                                 <h3 className="text-xl font-bold mb-2 text-primary">Beta Launch</h3>
