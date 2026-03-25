@@ -39,7 +39,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
-              Beta Preview • Launching Feb 20th
+              Beta Preview • Launching May 20th
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight">
               Source Premium <br />
@@ -240,7 +240,7 @@ const CTA = () => {
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-semibold mb-6 border border-white/20 backdrop-blur-sm">
               <Rocket className="w-4 h-4" />
-              Launching February 20th, 2026
+              Launching May 20th, 2026
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Be The First To Know</h2>
             <p className="text-green-100 text-lg md:text-xl mb-10">
